@@ -5,7 +5,7 @@ require_once('php/builder.php');
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="Yael Goede" />
+  <meta name="author" content="Weslyvanbaarsen" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Home</title>
   <link rel="stylesheet" type="text/css" href="css/index.css">
