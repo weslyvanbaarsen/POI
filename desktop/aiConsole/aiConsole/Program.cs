@@ -4,49 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
-using System.Threading;
 namespace aiConsole
 {
     class Program
     {
-        //variables
-        public static String userName;
-        public static String command;
-        public static ArrayList commands = new ArrayList();
-        //methods
-        static void initCommands()
+        static ArrayList commands = new ArrayList();
+        public Program()
         {
-            commands.Add(new Command("connect"));
+            //add commands
+            commands.Add(new google());
         }
         static void Main(string[] args)
         {
-            initCommands();
-            System.Console.WriteLine("hi, who are you?");
-            userName = System.Console.ReadLine();
-            System.Console.WriteLine("Welcome, " + userName + ". My name is poi");
-            command = System.Console.ReadLine();
-            foreach (Command c in commands)
+            System.Console.WriteLine("welcome user");
+            String c = System.Console.ReadLine();
+            if (c.Equals("google"))
             {
-                if (command.Equals(c.cName))
-                {
-                    c.action();
-                }
+                +
             }
-
-            System.Console.WriteLine("i'm leaving, bye my lover, good bye my friend");
-            Thread.Sleep(2000);
         }
     }
     class Command
     {
-       public Command(String cName)
+        public virtual void action()
         {
-            this.cName = cName;
+
         }
-        public String cName;
-        public void action(){}
     }
-	class google
-	{
-	}
+    class google : Command
+    {
+        public String name = "google";
+        public override void action()
+        {
+            
+        }
+    }
 }
